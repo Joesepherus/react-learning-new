@@ -16,9 +16,10 @@ import Scroll from "./refs/Scroll";
 import Scroll2 from "./refs/Scroll2";
 import RefForwardingDeepDive from "./refs/RefForwardingDeepDive";
 import ModifyDOMBreak from "./refs/ModifyDOMBreak";
+import Challenge1_refs_dom from "./refs_dom/Challenge1";
 
 function App() {
-  return <ModifyDOMBreak />;
+  return <Challenge1_refs_dom />;
 }
 
 export default App;
