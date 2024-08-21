@@ -18,9 +18,10 @@ import RefForwardingDeepDive from "./refs/RefForwardingDeepDive";
 import ModifyDOMBreak from "./refs/ModifyDOMBreak";
 import Challenge1_refs_dom from "./refs_dom/Challenge1";
 import Challenge2_refs_dom from "./refs_dom/Challenge2";
+import Challenge3_refs_dom from "./refs_dom/Challenge3";
 
 function App() {
-  return <Challenge2_refs_dom />;
+  return <Challenge3_refs_dom />;
 }
 
 export default App;
