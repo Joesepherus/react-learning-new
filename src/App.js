@@ -26,9 +26,10 @@ import InfiniteLoopFix from "./effects/InfiniteLoopFix";
 import VideoPlayerTooManyRenders from "./effects/VideoPlayerTooManyRenders";
 import VideoPlayerTooManyRendersFix from "./effects/VideoPlayerTooManyRendersFix";
 import ChatRoom from "./effects/ChatRoom";
+import Playground from "./effects/Playground";
 
 function App() {
-  return <ChatRoom />;
+  return <Playground />;
 }
 
 export default App;
