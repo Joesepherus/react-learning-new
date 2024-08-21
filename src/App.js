@@ -11,9 +11,12 @@ import Challenge1 from "./refs/Challenge1";
 import Challenge2 from "./refs/Challenge2";
 import Challenge3 from "./refs/Challenge3";
 import Challenge4 from "./refs/Challenge4";
+import Focus from "./refs/Focus";
+import Scroll from "./refs/Scroll";
+import Scroll2 from "./refs/Scroll2";
 
 function App() {
-  return <Challenge4 />;
+  return <Scroll2 />;
 }
 
 export default App;
