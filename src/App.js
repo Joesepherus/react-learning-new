@@ -27,9 +27,13 @@ import VideoPlayerTooManyRenders from "./effects/VideoPlayerTooManyRenders";
 import VideoPlayerTooManyRendersFix from "./effects/VideoPlayerTooManyRendersFix";
 import ChatRoom from "./effects/ChatRoom";
 import Playground from "./effects/Playground";
+import Challenge1_effects from "./effects/Challenge1";
+import Challenge2_effects from "./effects/Challenge2";
+import Challenge3_effects from "./effects/Challenge3";
+import Challenge4_effects from "./effects/Challenge4";
 
 function App() {
-  return <Playground />;
+  return <Challenge4_effects />;
 }
 
 export default App;
