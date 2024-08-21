@@ -20,9 +20,12 @@ import Challenge1_refs_dom from "./refs_dom/Challenge1";
 import Challenge2_refs_dom from "./refs_dom/Challenge2";
 import Challenge3_refs_dom from "./refs_dom/Challenge3";
 import Challenge4_refs_dom from "./refs_dom/Challenge4";
+import VideoPlayer from "./effects/VideoPlayer";
+import InfiniteLoop from "./effects/InfiniteLoop";
+import InfiniteLoopFix from "./effects/InfiniteLoopFix";
 
 function App() {
-  return <Challenge4_refs_dom />;
+  return <InfiniteLoopFix />;
 }
 
 export default App;
