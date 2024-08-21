@@ -23,9 +23,12 @@ import Challenge4_refs_dom from "./refs_dom/Challenge4";
 import VideoPlayer from "./effects/VideoPlayer";
 import InfiniteLoop from "./effects/InfiniteLoop";
 import InfiniteLoopFix from "./effects/InfiniteLoopFix";
+import VideoPlayerTooManyRenders from "./effects/VideoPlayerTooManyRenders";
+import VideoPlayerTooManyRendersFix from "./effects/VideoPlayerTooManyRendersFix";
+import ChatRoom from "./effects/ChatRoom";
 
 function App() {
-  return <InfiniteLoopFix />;
+  return <ChatRoom />;
 }
 
 export default App;
