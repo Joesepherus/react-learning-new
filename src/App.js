@@ -14,9 +14,10 @@ import Challenge4 from "./refs/Challenge4";
 import Focus from "./refs/Focus";
 import Scroll from "./refs/Scroll";
 import Scroll2 from "./refs/Scroll2";
+import RefForwardingDeepDive from "./refs/RefForwardingDeepDive";
 
 function App() {
-  return <Scroll2 />;
+  return <RefForwardingDeepDive />;
 }
 
 export default App;
