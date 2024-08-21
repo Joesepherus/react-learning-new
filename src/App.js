@@ -8,9 +8,10 @@ import RefUpdating from "./RefUpdating";
 import RefUpdating2 from "./RefUpdating2";
 import VariableNotUpdating from "./VariableNotUpdating";
 import Challenge1 from "./refs/Challenge1";
+import Challenge2 from "./refs/Challenge2";
 
 function App() {
-  return <Challenge1 />;
+  return <Challenge2 />;
 }
 
 export default App;
