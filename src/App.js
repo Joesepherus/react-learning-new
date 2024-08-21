@@ -10,9 +10,10 @@ import VariableNotUpdating from "./VariableNotUpdating";
 import Challenge1 from "./refs/Challenge1";
 import Challenge2 from "./refs/Challenge2";
 import Challenge3 from "./refs/Challenge3";
+import Challenge4 from "./refs/Challenge4";
 
 function App() {
-  return <Challenge3 />;
+  return <Challenge4 />;
 }
 
 export default App;
