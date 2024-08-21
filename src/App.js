@@ -6,9 +6,10 @@ import Stopwatch from "./Stopwatch";
 import RefNotUpdating from "./RefNotUpdating";
 import RefUpdating from "./RefUpdating";
 import RefUpdating2 from "./RefUpdating2";
+import VariableNotUpdating from "./VariableNotUpdating";
 
 function App() {
-  return <RefUpdating2 />;
+  return <VariableNotUpdating />;
 }
 
 export default App;
