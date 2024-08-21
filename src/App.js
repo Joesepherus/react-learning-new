@@ -15,9 +15,10 @@ import Focus from "./refs/Focus";
 import Scroll from "./refs/Scroll";
 import Scroll2 from "./refs/Scroll2";
 import RefForwardingDeepDive from "./refs/RefForwardingDeepDive";
+import ModifyDOMBreak from "./refs/ModifyDOMBreak";
 
 function App() {
-  return <RefForwardingDeepDive />;
+  return <ModifyDOMBreak />;
 }
 
 export default App;
