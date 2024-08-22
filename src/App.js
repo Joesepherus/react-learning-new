@@ -31,9 +31,16 @@ import Challenge1_effects from "./effects/Challenge1";
 import Challenge2_effects from "./effects/Challenge2";
 import Challenge3_effects from "./effects/Challenge3";
 import Challenge4_effects from "./effects/Challenge4";
+import Challenge1_reactive_effects from "./reactive_effects/Challenge1";
+import Challenge2_reactive_effects from "./reactive_effects/Challenge2";
+import Challenge3_reactive_effects from "./reactive_effects/Challenge3";
+import Challenge4_reactive_effects from "./reactive_effects/Challenge4";
+import Challenge5_reactive_effects from "./reactive_effects/Challenge5";
+import Challenge1_remove_dependencies from "./remove_dependencies/Challenge1";
+import Challenge3_remove_dependencies from "./remove_dependencies/Challenge3";
 
 function App() {
-  return <Challenge4_effects />;
+  return <Challenge3_remove_dependencies />;
 }
 
 export default App;
