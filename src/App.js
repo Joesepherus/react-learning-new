@@ -41,9 +41,11 @@ import Challenge3_remove_dependencies from "./remove_dependencies/Challenge3";
 import WithoutReducer from "./reducer/WithoutReducer";
 import WithoutContext from "./context/WithoutContext/WithoutContext";
 import WithContext from "./context/WithContext/WithContext";
+import ReducerWithoutContext from "./reducerAndContext/ReducerWithoutContext/ReducerWithoutContext";
+import ReducerWithContext from "./reducerAndContext/ReducerWithContext/ReducerWithContext";
 
 function App() {
-  return <WithoutContext />;
+  return <ReducerWithContext />;
 }
 
 export default App;
