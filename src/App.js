@@ -38,9 +38,10 @@ import Challenge4_reactive_effects from "./reactive_effects/Challenge4";
 import Challenge5_reactive_effects from "./reactive_effects/Challenge5";
 import Challenge1_remove_dependencies from "./remove_dependencies/Challenge1";
 import Challenge3_remove_dependencies from "./remove_dependencies/Challenge3";
+import WithReducer from "./reducer/WithReducer";
 
 function App() {
-  return <Challenge3_remove_dependencies />;
+  return <WithReducer />;
 }
 
 export default App;
