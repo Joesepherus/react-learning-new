@@ -43,9 +43,11 @@ import WithoutContext from "./context/WithoutContext/WithoutContext";
 import WithContext from "./context/WithContext/WithContext";
 import ReducerWithoutContext from "./reducerAndContext/ReducerWithoutContext/ReducerWithoutContext";
 import ReducerWithContext from "./reducerAndContext/ReducerWithContext/ReducerWithContext";
+import Preserved from "./preservingState/Preserved/Preserved";
+import NotPreserved from "./preservingState/NotPreserved/NotPreserved";
 
 function App() {
-  return <ReducerWithContext />;
+  return <NotPreserved />;
 }
 
 export default App;
