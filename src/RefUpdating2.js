@@ -1,14 +1,15 @@
 import { useRef, useEffect, useState } from "react";
+import Layout from "./Layout";
 
 export default function RefUpdating2() {
   let countRef = useRef(0);
   const [render, setRender] = useState(0);
-  console.log('countRef: ', countRef.current);
+  console.log("countRef: ", countRef.current);
 
   function handleClick() {
     // This doesn't re-render the component!
     countRef.current = countRef.current + 1;
-    console.log('handleClick countRef: ', countRef.current);
+    console.log("handleClick countRef: ", countRef.current);
   }
 
   function getRefValue() {
@@ -17,12 +18,10 @@ export default function RefUpdating2() {
   }
 
   return (
-    <>
-      <button onClick={handleClick}>
-        Increment Ref Value
-      </button>
+    <Layout>
+      <button onClick={handleClick}>Increment Ref Value</button>
       <button onClick={getRefValue}>Get Ref Value</button>
       <div>You clicked {countRef.current} times</div>
-    </>
+    </Layout>
   );
 }

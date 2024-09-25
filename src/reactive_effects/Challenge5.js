@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Layout from "../Layout";
 
 export function fetchData(url) {
   if (url === "/planets") {
@@ -129,8 +130,8 @@ export default function Page() {
       fetchData(`/planets/${planetId}/places`).then((result) => {
         if (!ignore) {
           console.log("Fetched a list of places.");
-          console.log('result: ', result);
-          setPlaceList(result)
+          console.log("result: ", result);
+          setPlaceList(result);
           setPlaceId(result[0].id); // Select the first planet
         }
       });
@@ -141,7 +142,7 @@ export default function Page() {
   }, [planetId]);
 
   return (
-    <>
+    <Layout>
       <label>
         Pick a planet:{" "}
         <select
@@ -176,6 +177,6 @@ export default function Page() {
       <p>
         You are going to: {placeId || "???"} on {planetId || "???"}{" "}
       </p>
-    </>
+    </Layout>
   );
 }

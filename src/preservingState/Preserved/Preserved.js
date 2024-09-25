@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import '../styles.css'
+import { useState } from "react";
+import "../styles.css";
+import Layout from "../../Layout";
 
 export default function Preserved() {
   const [isFancy, setIsFancy] = useState(false);
@@ -11,8 +12,8 @@ export default function Preserved() {
           <input
             type="checkbox"
             checked={isFancy}
-            onChange={e => {
-              setIsFancy(e.target.checked)
+            onChange={(e) => {
+              setIsFancy(e.target.checked);
             }}
           />
           Use fancy styling
@@ -21,19 +22,21 @@ export default function Preserved() {
     );
   }
   return (
-    <div>
-      <Counter isFancy={false} />
-      <label>
-        <input
-          type="checkbox"
-          checked={isFancy}
-          onChange={e => {
-            setIsFancy(e.target.checked)
-          }}
-        />
-        Use fancy styling
-      </label>
-    </div>
+    <Layout>
+      <div>
+        <Counter isFancy={false} />
+        <label>
+          <input
+            type="checkbox"
+            checked={isFancy}
+            onChange={(e) => {
+              setIsFancy(e.target.checked);
+            }}
+          />
+          Use fancy styling
+        </label>
+      </div>
+    </Layout>
   );
 }
 
@@ -41,12 +44,12 @@ function Counter({ isFancy }) {
   const [score, setScore] = useState(0);
   const [hover, setHover] = useState(false);
 
-  let className = 'counter';
+  let className = "counter";
   if (hover) {
-    className += ' hover';
+    className += " hover";
   }
   if (isFancy) {
-    className += ' fancy';
+    className += " fancy";
   }
 
   return (
@@ -56,9 +59,7 @@ function Counter({ isFancy }) {
       onPointerLeave={() => setHover(false)}
     >
       <h1>{score}</h1>
-      <button onClick={() => setScore(score + 1)}>
-        Add one
-      </button>
+      <button onClick={() => setScore(score + 1)}>Add one</button>
     </div>
   );
 }

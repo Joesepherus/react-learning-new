@@ -1,4 +1,5 @@
-import { useRef } from 'react';
+import { useRef } from "react";
+import Layout from "../Layout";
 
 export default function Scroll() {
   const firstCatRef = useRef(null);
@@ -7,48 +8,49 @@ export default function Scroll() {
 
   function handleScrollToFirstCat() {
     firstCatRef.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center'
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
     });
   }
 
   function handleScrollToSecondCat() {
     secondCatRef.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center'
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
     });
   }
 
   function handleScrollToThirdCat() {
     thirdCatRef.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center'
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
     });
   }
 
   function renderLotsOfBr() {
-    let br = []
-    for(let i=0; i < 50; i++) {
-        br.push(<br />)
+    let br = [];
+    for (let i = 0; i < 50; i++) {
+      br.push(<br />);
     }
-    return br
+    return br;
   }
 
   return (
-    <>
-      <nav style={{position: 'sticky', top: 0, margin:'auto', width: 'fit-content'}}>
-        <button onClick={handleScrollToFirstCat}>
-          Tom
-        </button>
-        <button onClick={handleScrollToSecondCat}>
-          Maru
-        </button>
-        <button onClick={handleScrollToThirdCat}>
-          Jellylorum
-        </button>
+    <Layout>
+      <nav
+        style={{
+          position: "sticky",
+          top: 0,
+          margin: "auto",
+          width: "fit-content",
+        }}
+      >
+        <button onClick={handleScrollToFirstCat}>Tom</button>
+        <button onClick={handleScrollToSecondCat}>Maru</button>
+        <button onClick={handleScrollToThirdCat}>Jellylorum</button>
       </nav>
       <div>
         <ul>
@@ -77,6 +79,6 @@ export default function Scroll() {
           </li>
         </ul>
       </div>
-    </>
+    </Layout>
   );
 }

@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+import Layout from "../Layout";
 
 function Playground() {
-  const [text, setText] = useState('a');
+  const [text, setText] = useState("a");
 
   useEffect(() => {
     function onTimeout() {
-      console.log('⏰ ' + text);
+      console.log("⏰ " + text);
     }
 
     console.log('🔵 Schedule "' + text + '" log');
@@ -20,11 +21,8 @@ function Playground() {
   return (
     <>
       <label>
-        What to log:{' '}
-        <input
-          value={text}
-          onChange={e => setText(e.target.value)}
-        />
+        What to log:{" "}
+        <input value={text} onChange={(e) => setText(e.target.value)} />
       </label>
       <h1>{text}</h1>
     </>
@@ -34,12 +32,12 @@ function Playground() {
 export default function App() {
   const [show, setShow] = useState(false);
   return (
-    <>
+    <Layout>
       <button onClick={() => setShow(!show)}>
-        {show ? 'Unmount' : 'Mount'} the component
+        {show ? "Unmount" : "Mount"} the component
       </button>
       {show && <hr />}
       {show && <Playground />}
-    </>
+    </Layout>
   );
 }

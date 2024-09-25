@@ -1,51 +1,47 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+import Layout from "../Layout";
 
 export function createConnection(serverUrl, roomId) {
   // A real implementation would actually connect to the server
   return {
     connect() {
-      console.log('✅ Connecting to "' + roomId + '" room at ' + serverUrl + '...');
+      console.log(
+        '✅ Connecting to "' + roomId + '" room at ' + serverUrl + "..."
+      );
     },
     disconnect() {
       console.log('❌ Disconnected from "' + roomId + '" room at ' + serverUrl);
-    }
+    },
   };
 }
 
-
-const serverUrl = 'https://localhost:1234';
+const serverUrl = "https://localhost:1234";
 
 function ChatRoom({ roomId }) {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const connection = createConnection(serverUrl, roomId);
     connection.connect();
     return () => connection.disconnect();
-  },[roomId]);
+  }, [roomId]);
 
   return (
     <>
       <h1>Welcome to the {roomId} room!</h1>
-      <input
-        value={message}
-        onChange={e => setMessage(e.target.value)}
-      />
+      <input value={message} onChange={(e) => setMessage(e.target.value)} />
     </>
   );
 }
 
 export default function App() {
-  const [roomId, setRoomId] = useState('general');
+  const [roomId, setRoomId] = useState("general");
 
   return (
-    <>
+    <Layout>
       <label>
-        Choose the chat room:{' '}
-        <select
-          value={roomId}
-          onChange={e => setRoomId(e.target.value)}
-        >
+        Choose the chat room:{" "}
+        <select value={roomId} onChange={(e) => setRoomId(e.target.value)}>
           <option value="general">general</option>
           <option value="travel">travel</option>
           <option value="music">music</option>
@@ -53,6 +49,6 @@ export default function App() {
       </label>
       <hr />
       <ChatRoom roomId={roomId} />
-    </>
+    </Layout>
   );
 }

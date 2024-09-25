@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import Layout from "../Layout";
 
 function setupCatList() {
   const catList = [];
@@ -33,7 +34,7 @@ export default function Scroll2() {
     return itemsRef.current;
   }
 
-  // In this example, itemsRef doesn’t hold a single DOM node. 
+  // In this example, itemsRef doesn’t hold a single DOM node.
   // Instead, it holds a Map from item ID to a DOM node.
   // (Refs can hold any values!)
   function setupMap(node, cat) {
@@ -47,7 +48,7 @@ export default function Scroll2() {
   }
 
   return (
-    <>
+    <Layout>
       <nav>
         <button onClick={() => scrollToCat(catList[0])}>Tom</button>
         <button onClick={() => scrollToCat(catList[5])}>Maru</button>
@@ -62,6 +63,6 @@ export default function Scroll2() {
           ))}
         </ul>
       </div>
-    </>
+    </Layout>
   );
 }

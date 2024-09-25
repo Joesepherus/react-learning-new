@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
+import Layout from "../Layout";
 
 function MyInput({ shouldFocus, value, onChange }) {
   const ref = useRef(null);
 
   // TODO: call focus() only if shouldFocus is true.
   useEffect(() => {
-    if(shouldFocus){
+    if (shouldFocus) {
       ref.current.focus();
-
     }
   }, [shouldFocus]);
 
@@ -21,7 +21,7 @@ export default function Form() {
   const [upper, setUpper] = useState(false);
   const name = firstName + " " + lastName;
   return (
-    <>
+    <Layout>
       <button onClick={() => setShow((s) => !s)}>
         {show ? "Hide" : "Show"} form
       </button>
@@ -50,6 +50,6 @@ export default function Form() {
           </p>
         </>
       )}
-    </>
+    </Layout>
   );
 }

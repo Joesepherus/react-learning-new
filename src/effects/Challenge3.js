@@ -1,17 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+import Layout from "../Layout";
 
 function Counter() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     function onTick() {
-      setCount(c => c + 1);
+      setCount((c) => c + 1);
     }
 
     const timeoutId = setInterval(onTick, 1000);
     return () => {
-      clearInterval(timeoutId)
-    }
+      clearInterval(timeoutId);
+    };
   }, []);
 
   return <h1>{count}</h1>;
@@ -20,11 +21,13 @@ function Counter() {
 export default function Form() {
   const [show, setShow] = useState(false);
   return (
-    <>
-      <button onClick={() => setShow(s => !s)}>{show ? 'Hide' : 'Show'} counter</button>
+    <Layout>
+      <button onClick={() => setShow((s) => !s)}>
+        {show ? "Hide" : "Show"} counter
+      </button>
       <br />
       <hr />
       {show && <Counter />}
-    </>
+    </Layout>
   );
 }

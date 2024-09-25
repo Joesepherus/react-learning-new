@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import TaskList from './TaskList.js';
-import AddTask from './AddTask.js';
+import { useState } from "react";
+import TaskList from "./TaskList.js";
+import AddTask from "./AddTask.js";
+import Layout from "../Layout.js";
 
 export default function TaskApp() {
   const [tasks, setTasks] = useState(initialTasks);
@@ -33,7 +34,7 @@ export default function TaskApp() {
   }
 
   return (
-    <>
+    <Layout>
       <h1>Prague itinerary</h1>
       <AddTask onAddTask={handleAddTask} />
       <TaskList
@@ -41,13 +42,13 @@ export default function TaskApp() {
         onChangeTask={handleChangeTask}
         onDeleteTask={handleDeleteTask}
       />
-    </>
+    </Layout>
   );
 }
 
 let nextId = 3;
 const initialTasks = [
-  {id: 0, text: 'Visit Kafka Museum', done: true},
-  {id: 1, text: 'Watch a puppet show', done: false},
-  {id: 2, text: 'Lennon Wall pic', done: false},
+  { id: 0, text: "Visit Kafka Museum", done: true },
+  { id: 1, text: "Watch a puppet show", done: false },
+  { id: 2, text: "Lennon Wall pic", done: false },
 ];

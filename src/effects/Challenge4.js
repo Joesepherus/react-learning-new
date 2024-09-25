@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Layout from "../Layout";
 
 function fetchBio(person) {
   const delay = person === "Bob" ? 2000 : 200;
@@ -27,7 +28,7 @@ export default function Page() {
   }, [person]);
 
   return (
-    <>
+    <Layout>
       <select
         value={person}
         onChange={(e) => {
@@ -42,6 +43,6 @@ export default function Page() {
       <p>
         <i>{bio ?? "Loading..."}</i>
       </p>
-    </>
+    </Layout>
   );
 }

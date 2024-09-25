@@ -1,4 +1,5 @@
-import { useRef } from 'react';
+import { useRef } from "react";
+import Layout from "./Layout";
 
 export default function RefNotUpdating() {
   let countRef = useRef(0);
@@ -9,8 +10,10 @@ export default function RefNotUpdating() {
   }
 
   return (
-    <button onClick={handleClick}>
-      You clicked {countRef.current} times
-    </button>
+    <Layout>
+      <button onClick={handleClick}>
+        You clicked {countRef.current} times
+      </button>
+    </Layout>
   );
 }

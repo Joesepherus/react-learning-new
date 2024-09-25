@@ -1,4 +1,5 @@
-import { useRef } from 'react';
+import { useRef } from "react";
+import Layout from "../Layout";
 
 export default function Focus() {
   const inputRef = useRef(null);
@@ -8,11 +9,9 @@ export default function Focus() {
   }
 
   return (
-    <>
+    <Layout>
       <input ref={inputRef} />
-      <button onClick={handleClick}>
-        Focus the input
-      </button>
-    </>
+      <button onClick={handleClick}>Focus the input</button>
+    </Layout>
   );
 }

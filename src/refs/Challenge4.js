@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import Layout from "../Layout";
 
 export default function Chat() {
   const ref = useRef();
@@ -11,7 +12,7 @@ export default function Chat() {
   }
 
   return (
-    <>
+    <Layout>
       <input
         value={text}
         onChange={(e) => {
@@ -20,6 +21,6 @@ export default function Chat() {
         }}
       />
       <button onClick={handleSend}>Send</button>
-    </>
+    </Layout>
   );
 }

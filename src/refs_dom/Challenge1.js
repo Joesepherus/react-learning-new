@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import Layout from "../Layout";
 
 export default function VideoPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -6,17 +7,19 @@ export default function VideoPlayer() {
 
   function handlePlay() {
     videoRef.current.play();
-    setIsPlaying(true)
+    setIsPlaying(true);
   }
 
   function handlePause() {
     videoRef.current.pause();
-    setIsPlaying(false)
+    setIsPlaying(false);
   }
 
   return (
-    <>
-      <button onClick={isPlaying? handlePause: handlePlay}>{isPlaying ? "Pause" : "Play"}</button>
+    <Layout>
+      <button onClick={isPlaying ? handlePause : handlePlay}>
+        {isPlaying ? "Pause" : "Play"}
+      </button>
       <video
         width="250"
         ref={videoRef}
@@ -29,6 +32,6 @@ export default function VideoPlayer() {
           type="video/mp4"
         />
       </video>
-    </>
+    </Layout>
   );
 }

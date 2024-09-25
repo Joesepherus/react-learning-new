@@ -1,10 +1,11 @@
-import { useState, useRef } from 'react';
+import { useState, useRef } from "react";
+import Layout from "./Layout";
 
 export default function Stopwatch() {
   const [startTime, setStartTime] = useState(null);
   const [now, setNow] = useState(null);
   const intervalRef = useRef(null);
-  
+
   function handleStart() {
     setStartTime(Date.now());
     setNow(Date.now());
@@ -25,14 +26,10 @@ export default function Stopwatch() {
   }
 
   return (
-    <>
+    <Layout>
       <h1>Time passed: {secondsPassed.toFixed(3)}</h1>
-      <button onClick={handleStart}>
-        Start
-      </button>
-      <button onClick={handleStop}>
-        Stop
-      </button>
-    </>
+      <button onClick={handleStart}>Start</button>
+      <button onClick={handleStop}>Stop</button>
+    </Layout>
   );
 }
