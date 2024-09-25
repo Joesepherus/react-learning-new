@@ -51,6 +51,8 @@ import FixNested from "./preservingState/FixNested/FixNested";
 import ReactingToInput from "./reactingToInput/ReactingToInput";
 import ReactingToInput_Challenge1 from "./reactingToInput/ReactingToInput_Challenge1";
 import ReactingToInput_Challenge2 from "./reactingToInput/ReactingToInput_Challenge2";
+import Queueing_Challenge1 from "./queueing/Queueing_Challenge1";
+import Queueing_Challenge2 from "./queueing/Queueing_Challenge2";
 import "./styles.css";
 
 // HomePage component that lists all components in cards
@@ -139,6 +141,14 @@ function HomePage() {
     {
       name: "ReactingToInput_Challenge2",
       path: "/reacting-to-input-challenge2",
+    },
+    {
+      name: "Queueing_Challenge1",
+      path: "/queueing-challenge1",
+    },
+    {
+      name: "Queueing_Challenge2",
+      path: "/queueing-challenge2",
     },
   ];
 
@@ -257,6 +267,8 @@ function App() {
           path="/reacting-to-input-challenge2"
           element={<ReactingToInput_Challenge2 />}
         />
+        <Route path="/queueing-challenge1" element={<Queueing_Challenge1 />} />
+        <Route path="/queueing-challenge2" element={<Queueing_Challenge2 />} />
       </Routes>
     </Router>
   );
