@@ -45,9 +45,11 @@ import ReducerWithoutContext from "./reducerAndContext/ReducerWithoutContext/Red
 import ReducerWithContext from "./reducerAndContext/ReducerWithContext/ReducerWithContext";
 import Preserved from "./preservingState/Preserved/Preserved";
 import NotPreserved from "./preservingState/NotPreserved/NotPreserved";
+import Nested from "./preservingState/Nested/Nested";
+import FixNested from "./preservingState/FixNested/FixNested";
 
 function App() {
-  return <NotPreserved />;
+  return <FixNested />;
 }
 
 export default App;
