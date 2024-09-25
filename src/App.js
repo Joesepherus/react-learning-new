@@ -57,6 +57,9 @@ import SingleEvent from "./updatingObjects/SingleEvent";
 import NestedObject from "./updatingObjects/NestedObject";
 import UpdatingObjectsChallenge1 from "./updatingObjects/UpdatingObjects_Challenge1";
 import UpdatingObjectsChallenge2 from "./updatingObjects/UpdatingObjects_Challenge2";
+import UpdatingArrays_Challenge1 from "./updatingArrays/UpdatingArrays_Challenge1";
+import UpdatingArrays_Challenge2 from "./updatingArrays/UpdatingArrays_Challenge2";
+import UpdatingArrays_Challenge3 from "./updatingArrays/UpdatingArrays_Challenge3";
 
 import "./styles.css";
 
@@ -170,6 +173,18 @@ function HomePage() {
     {
       name: "UpdatingObjectsChallenge2",
       path: "/updating-objects-challenge2",
+    },
+    {
+      name: "UpdatingArrays_Challenge1",
+      path: "/updating-arrays-challenge1",
+    },
+    {
+      name: "UpdatingArrays_Challenge2",
+      path: "/updating-arrays-challenge2",
+    },
+    {
+      name: "UpdatingArrays_Challenge3",
+      path: "/updating-arrays-challenge3",
     },
   ];
 
@@ -305,6 +320,18 @@ function App() {
         <Route
           path="/updating-objects-challenge2"
           element={<UpdatingObjectsChallenge2 />}
+        />
+        <Route
+          path="/updating-arrays-challenge1"
+          element={<UpdatingArrays_Challenge1 />}
+        />
+        <Route
+          path="/updating-arrays-challenge2"
+          element={<UpdatingArrays_Challenge2 />}
+        />
+        <Route
+          path="/updating-arrays-challenge3"
+          element={<UpdatingArrays_Challenge3 />}
         />
       </Routes>
     </Router>
