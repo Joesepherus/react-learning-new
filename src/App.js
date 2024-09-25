@@ -48,7 +48,7 @@ import Preserved from "./preservingState/Preserved/Preserved";
 import NotPreserved from "./preservingState/NotPreserved/NotPreserved";
 import Nested from "./preservingState/Nested/Nested";
 import FixNested from "./preservingState/FixNested/FixNested";
-import './styles.css'
+import "./styles.css";
 
 // HomePage component that lists all components in cards
 function HomePage() {
@@ -77,21 +77,48 @@ function HomePage() {
     { name: "VideoPlayer", path: "/video-player" },
     { name: "InfiniteLoop", path: "/infinite-loop" },
     { name: "InfiniteLoopFix", path: "/infinite-loop-fix" },
-    { name: "VideoPlayerTooManyRenders", path: "/video-player-too-many-renders" },
-    { name: "VideoPlayerTooManyRendersFix", path: "/video-player-too-many-renders-fix" },
+    {
+      name: "VideoPlayerTooManyRenders",
+      path: "/video-player-too-many-renders",
+    },
+    {
+      name: "VideoPlayerTooManyRendersFix",
+      path: "/video-player-too-many-renders-fix",
+    },
     { name: "ChatRoom", path: "/chat-room" },
     { name: "Playground", path: "/playground" },
     { name: "Challenge1_effects", path: "/challenge1-effects" },
     { name: "Challenge2_effects", path: "/challenge2-effects" },
     { name: "Challenge3_effects", path: "/challenge3-effects" },
     { name: "Challenge4_effects", path: "/challenge4-effects" },
-    { name: "Challenge1_reactive_effects", path: "/challenge1-reactive-effects" },
-    { name: "Challenge2_reactive_effects", path: "/challenge2-reactive-effects" },
-    { name: "Challenge3_reactive_effects", path: "/challenge3-reactive-effects" },
-    { name: "Challenge4_reactive_effects", path: "/challenge4-reactive-effects" },
-    { name: "Challenge5_reactive_effects", path: "/challenge5-reactive-effects" },
-    { name: "Challenge1_remove_dependencies", path: "/challenge1-remove-dependencies" },
-    { name: "Challenge3_remove_dependencies", path: "/challenge3-remove-dependencies" },
+    {
+      name: "Challenge1_reactive_effects",
+      path: "/challenge1-reactive-effects",
+    },
+    {
+      name: "Challenge2_reactive_effects",
+      path: "/challenge2-reactive-effects",
+    },
+    {
+      name: "Challenge3_reactive_effects",
+      path: "/challenge3-reactive-effects",
+    },
+    {
+      name: "Challenge4_reactive_effects",
+      path: "/challenge4-reactive-effects",
+    },
+    {
+      name: "Challenge5_reactive_effects",
+      path: "/challenge5-reactive-effects",
+    },
+    {
+      name: "Challenge1_remove_dependencies",
+      path: "/challenge1-remove-dependencies",
+    },
+    {
+      name: "Challenge3_remove_dependencies",
+      path: "/challenge3-remove-dependencies",
+    },
     { name: "WithoutReducer", path: "/without-reducer" },
     { name: "WithoutContext", path: "/without-context" },
     { name: "WithContext", path: "/with-context" },
@@ -106,6 +133,7 @@ function HomePage() {
   return (
     <div>
       <h1>Component List</h1>
+      <div>Count: {components.length}</div>
       <div className="card-container">
         {components.map((component) => (
           <div key={component.name} className="card">
@@ -131,7 +159,10 @@ function App() {
         <Route path="/ref-not-updating" element={<RefNotUpdating />} />
         <Route path="/ref-updating" element={<RefUpdating />} />
         <Route path="/ref-updating-2" element={<RefUpdating2 />} />
-        <Route path="/variable-not-updating" element={<VariableNotUpdating />} />
+        <Route
+          path="/variable-not-updating"
+          element={<VariableNotUpdating />}
+        />
         <Route path="/challenge1" element={<Challenge1 />} />
         <Route path="/challenge2" element={<Challenge2 />} />
         <Route path="/challenge3" element={<Challenge3 />} />
@@ -139,7 +170,10 @@ function App() {
         <Route path="/focus" element={<Focus />} />
         <Route path="/scroll" element={<Scroll />} />
         <Route path="/scroll-2" element={<Scroll2 />} />
-        <Route path="/ref-forwarding-deep-dive" element={<RefForwardingDeepDive />} />
+        <Route
+          path="/ref-forwarding-deep-dive"
+          element={<RefForwardingDeepDive />}
+        />
         <Route path="/modify-dom-break" element={<ModifyDOMBreak />} />
         <Route path="/challenge1-refs-dom" element={<Challenge1_refs_dom />} />
         <Route path="/challenge2-refs-dom" element={<Challenge2_refs_dom />} />
@@ -148,25 +182,55 @@ function App() {
         <Route path="/video-player" element={<VideoPlayer />} />
         <Route path="/infinite-loop" element={<InfiniteLoop />} />
         <Route path="/infinite-loop-fix" element={<InfiniteLoopFix />} />
-        <Route path="/video-player-too-many-renders" element={<VideoPlayerTooManyRenders />} />
-        <Route path="/video-player-too-many-renders-fix" element={<VideoPlayerTooManyRendersFix />} />
+        <Route
+          path="/video-player-too-many-renders"
+          element={<VideoPlayerTooManyRenders />}
+        />
+        <Route
+          path="/video-player-too-many-renders-fix"
+          element={<VideoPlayerTooManyRendersFix />}
+        />
         <Route path="/chat-room" element={<ChatRoom />} />
         <Route path="/playground" element={<Playground />} />
         <Route path="/challenge1-effects" element={<Challenge1_effects />} />
         <Route path="/challenge2-effects" element={<Challenge2_effects />} />
         <Route path="/challenge3-effects" element={<Challenge3_effects />} />
         <Route path="/challenge4-effects" element={<Challenge4_effects />} />
-        <Route path="/challenge1-reactive-effects" element={<Challenge1_reactive_effects />} />
-        <Route path="/challenge2-reactive-effects" element={<Challenge2_reactive_effects />} />
-        <Route path="/challenge3-reactive-effects" element={<Challenge3_reactive_effects />} />
-        <Route path="/challenge4-reactive-effects" element={<Challenge4_reactive_effects />} />
-        <Route path="/challenge5-reactive-effects" element={<Challenge5_reactive_effects />} />
-        <Route path="/challenge1-remove-dependencies" element={<Challenge1_remove_dependencies />} />
-        <Route path="/challenge3-remove-dependencies" element={<Challenge3_remove_dependencies />} />
+        <Route
+          path="/challenge1-reactive-effects"
+          element={<Challenge1_reactive_effects />}
+        />
+        <Route
+          path="/challenge2-reactive-effects"
+          element={<Challenge2_reactive_effects />}
+        />
+        <Route
+          path="/challenge3-reactive-effects"
+          element={<Challenge3_reactive_effects />}
+        />
+        <Route
+          path="/challenge4-reactive-effects"
+          element={<Challenge4_reactive_effects />}
+        />
+        <Route
+          path="/challenge5-reactive-effects"
+          element={<Challenge5_reactive_effects />}
+        />
+        <Route
+          path="/challenge1-remove-dependencies"
+          element={<Challenge1_remove_dependencies />}
+        />
+        <Route
+          path="/challenge3-remove-dependencies"
+          element={<Challenge3_remove_dependencies />}
+        />
         <Route path="/without-reducer" element={<WithoutReducer />} />
         <Route path="/without-context" element={<WithoutContext />} />
         <Route path="/with-context" element={<WithContext />} />
-        <Route path="/reducer-without-context" element={<ReducerWithoutContext />} />
+        <Route
+          path="/reducer-without-context"
+          element={<ReducerWithoutContext />}
+        />
         <Route path="/reducer-with-context" element={<ReducerWithContext />} />
         <Route path="/preserved" element={<Preserved />} />
         <Route path="/not-preserved" element={<NotPreserved />} />
