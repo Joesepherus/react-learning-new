@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import BuggyTimer from "./BuggyTimer";
 import BuggyTimerFixed from "./BuggyTimerFixed";
 import BuggyTimerFixed2 from "./BuggyTimerFixed2";
@@ -47,9 +48,133 @@ import Preserved from "./preservingState/Preserved/Preserved";
 import NotPreserved from "./preservingState/NotPreserved/NotPreserved";
 import Nested from "./preservingState/Nested/Nested";
 import FixNested from "./preservingState/FixNested/FixNested";
+import './styles.css'
 
+// HomePage component that lists all components in cards
+function HomePage() {
+  const components = [
+    { name: "BuggyTimer", path: "/buggy-timer" },
+    { name: "BuggyTimerFixed", path: "/buggy-timer-fixed" },
+    { name: "BuggyTimerFixed2", path: "/buggy-timer-fixed2" },
+    { name: "Stopwatch", path: "/stopwatch" },
+    { name: "RefNotUpdating", path: "/ref-not-updating" },
+    { name: "RefUpdating", path: "/ref-updating" },
+    { name: "RefUpdating2", path: "/ref-updating-2" },
+    { name: "VariableNotUpdating", path: "/variable-not-updating" },
+    { name: "Challenge1", path: "/challenge1" },
+    { name: "Challenge2", path: "/challenge2" },
+    { name: "Challenge3", path: "/challenge3" },
+    { name: "Challenge4", path: "/challenge4" },
+    { name: "Focus", path: "/focus" },
+    { name: "Scroll", path: "/scroll" },
+    { name: "Scroll2", path: "/scroll-2" },
+    { name: "RefForwardingDeepDive", path: "/ref-forwarding-deep-dive" },
+    { name: "ModifyDOMBreak", path: "/modify-dom-break" },
+    { name: "Challenge1_refs_dom", path: "/challenge1-refs-dom" },
+    { name: "Challenge2_refs_dom", path: "/challenge2-refs-dom" },
+    { name: "Challenge3_refs_dom", path: "/challenge3-refs-dom" },
+    { name: "Challenge4_refs_dom", path: "/challenge4-refs-dom" },
+    { name: "VideoPlayer", path: "/video-player" },
+    { name: "InfiniteLoop", path: "/infinite-loop" },
+    { name: "InfiniteLoopFix", path: "/infinite-loop-fix" },
+    { name: "VideoPlayerTooManyRenders", path: "/video-player-too-many-renders" },
+    { name: "VideoPlayerTooManyRendersFix", path: "/video-player-too-many-renders-fix" },
+    { name: "ChatRoom", path: "/chat-room" },
+    { name: "Playground", path: "/playground" },
+    { name: "Challenge1_effects", path: "/challenge1-effects" },
+    { name: "Challenge2_effects", path: "/challenge2-effects" },
+    { name: "Challenge3_effects", path: "/challenge3-effects" },
+    { name: "Challenge4_effects", path: "/challenge4-effects" },
+    { name: "Challenge1_reactive_effects", path: "/challenge1-reactive-effects" },
+    { name: "Challenge2_reactive_effects", path: "/challenge2-reactive-effects" },
+    { name: "Challenge3_reactive_effects", path: "/challenge3-reactive-effects" },
+    { name: "Challenge4_reactive_effects", path: "/challenge4-reactive-effects" },
+    { name: "Challenge5_reactive_effects", path: "/challenge5-reactive-effects" },
+    { name: "Challenge1_remove_dependencies", path: "/challenge1-remove-dependencies" },
+    { name: "Challenge3_remove_dependencies", path: "/challenge3-remove-dependencies" },
+    { name: "WithoutReducer", path: "/without-reducer" },
+    { name: "WithoutContext", path: "/without-context" },
+    { name: "WithContext", path: "/with-context" },
+    { name: "ReducerWithoutContext", path: "/reducer-without-context" },
+    { name: "ReducerWithContext", path: "/reducer-with-context" },
+    { name: "Preserved", path: "/preserved" },
+    { name: "NotPreserved", path: "/not-preserved" },
+    { name: "Nested", path: "/nested" },
+    { name: "FixNested", path: "/fix-nested" },
+  ];
+
+  return (
+    <div>
+      <h1>Component List</h1>
+      <div className="card-container">
+        {components.map((component) => (
+          <div key={component.name} className="card">
+            <h2>{component.name}</h2>
+            <Link to={component.path}>Go to {component.name}</Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// App component with routes
 function App() {
-  return <FixNested />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/buggy-timer" element={<BuggyTimer />} />
+        <Route path="/buggy-timer-fixed" element={<BuggyTimerFixed />} />
+        <Route path="/buggy-timer-fixed2" element={<BuggyTimerFixed2 />} />
+        <Route path="/stopwatch" element={<Stopwatch />} />
+        <Route path="/ref-not-updating" element={<RefNotUpdating />} />
+        <Route path="/ref-updating" element={<RefUpdating />} />
+        <Route path="/ref-updating-2" element={<RefUpdating2 />} />
+        <Route path="/variable-not-updating" element={<VariableNotUpdating />} />
+        <Route path="/challenge1" element={<Challenge1 />} />
+        <Route path="/challenge2" element={<Challenge2 />} />
+        <Route path="/challenge3" element={<Challenge3 />} />
+        <Route path="/challenge4" element={<Challenge4 />} />
+        <Route path="/focus" element={<Focus />} />
+        <Route path="/scroll" element={<Scroll />} />
+        <Route path="/scroll-2" element={<Scroll2 />} />
+        <Route path="/ref-forwarding-deep-dive" element={<RefForwardingDeepDive />} />
+        <Route path="/modify-dom-break" element={<ModifyDOMBreak />} />
+        <Route path="/challenge1-refs-dom" element={<Challenge1_refs_dom />} />
+        <Route path="/challenge2-refs-dom" element={<Challenge2_refs_dom />} />
+        <Route path="/challenge3-refs-dom" element={<Challenge3_refs_dom />} />
+        <Route path="/challenge4-refs-dom" element={<Challenge4_refs_dom />} />
+        <Route path="/video-player" element={<VideoPlayer />} />
+        <Route path="/infinite-loop" element={<InfiniteLoop />} />
+        <Route path="/infinite-loop-fix" element={<InfiniteLoopFix />} />
+        <Route path="/video-player-too-many-renders" element={<VideoPlayerTooManyRenders />} />
+        <Route path="/video-player-too-many-renders-fix" element={<VideoPlayerTooManyRendersFix />} />
+        <Route path="/chat-room" element={<ChatRoom />} />
+        <Route path="/playground" element={<Playground />} />
+        <Route path="/challenge1-effects" element={<Challenge1_effects />} />
+        <Route path="/challenge2-effects" element={<Challenge2_effects />} />
+        <Route path="/challenge3-effects" element={<Challenge3_effects />} />
+        <Route path="/challenge4-effects" element={<Challenge4_effects />} />
+        <Route path="/challenge1-reactive-effects" element={<Challenge1_reactive_effects />} />
+        <Route path="/challenge2-reactive-effects" element={<Challenge2_reactive_effects />} />
+        <Route path="/challenge3-reactive-effects" element={<Challenge3_reactive_effects />} />
+        <Route path="/challenge4-reactive-effects" element={<Challenge4_reactive_effects />} />
+        <Route path="/challenge5-reactive-effects" element={<Challenge5_reactive_effects />} />
+        <Route path="/challenge1-remove-dependencies" element={<Challenge1_remove_dependencies />} />
+        <Route path="/challenge3-remove-dependencies" element={<Challenge3_remove_dependencies />} />
+        <Route path="/without-reducer" element={<WithoutReducer />} />
+        <Route path="/without-context" element={<WithoutContext />} />
+        <Route path="/with-context" element={<WithContext />} />
+        <Route path="/reducer-without-context" element={<ReducerWithoutContext />} />
+        <Route path="/reducer-with-context" element={<ReducerWithContext />} />
+        <Route path="/preserved" element={<Preserved />} />
+        <Route path="/not-preserved" element={<NotPreserved />} />
+        <Route path="/nested" element={<Nested />} />
+        <Route path="/fix-nested" element={<FixNested />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
