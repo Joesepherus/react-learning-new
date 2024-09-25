@@ -53,6 +53,11 @@ import ReactingToInput_Challenge1 from "./reactingToInput/ReactingToInput_Challe
 import ReactingToInput_Challenge2 from "./reactingToInput/ReactingToInput_Challenge2";
 import Queueing_Challenge1 from "./queueing/Queueing_Challenge1";
 import Queueing_Challenge2 from "./queueing/Queueing_Challenge2";
+import SingleEvent from "./updatingObjects/SingleEvent";
+import NestedObject from "./updatingObjects/NestedObject";
+import UpdatingObjectsChallenge1 from "./updatingObjects/UpdatingObjects_Challenge1";
+import UpdatingObjectsChallenge2 from "./updatingObjects/UpdatingObjects_Challenge2";
+
 import "./styles.css";
 
 // HomePage component that lists all components in cards
@@ -149,6 +154,22 @@ function HomePage() {
     {
       name: "Queueing_Challenge2",
       path: "/queueing-challenge2",
+    },
+    {
+      name: "SingleEvent",
+      path: "/updating-objects-single-event",
+    },
+    {
+      name: "NestedObject",
+      path: "/updating-objects-nested-object",
+    },
+    {
+      name: "UpdatingObjectsChallenge1",
+      path: "/updating-objects-challenge1",
+    },
+    {
+      name: "UpdatingObjectsChallenge2",
+      path: "/updating-objects-challenge2",
     },
   ];
 
@@ -269,6 +290,22 @@ function App() {
         />
         <Route path="/queueing-challenge1" element={<Queueing_Challenge1 />} />
         <Route path="/queueing-challenge2" element={<Queueing_Challenge2 />} />
+        <Route
+          path="/updating-objects-single-event"
+          element={<SingleEvent />}
+        />
+        <Route
+          path="/updating-objects-nested-object"
+          element={<NestedObject />}
+        />
+        <Route
+          path="/updating-objects-challenge1"
+          element={<UpdatingObjectsChallenge1 />}
+        />
+        <Route
+          path="/updating-objects-challenge2"
+          element={<UpdatingObjectsChallenge2 />}
+        />
       </Routes>
     </Router>
   );
