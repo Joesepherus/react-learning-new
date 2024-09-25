@@ -48,6 +48,7 @@ import Preserved from "./preservingState/Preserved/Preserved";
 import NotPreserved from "./preservingState/NotPreserved/NotPreserved";
 import Nested from "./preservingState/Nested/Nested";
 import FixNested from "./preservingState/FixNested/FixNested";
+import ReactingToInput from "./reactingToInput/ReactingToInput";
 import "./styles.css";
 
 // HomePage component that lists all components in cards
@@ -128,6 +129,7 @@ function HomePage() {
     { name: "NotPreserved", path: "/not-preserved" },
     { name: "Nested", path: "/nested" },
     { name: "FixNested", path: "/fix-nested" },
+    { name: "ReactingToInput", path: "/reacting-to-input" },
   ];
 
   return (
@@ -236,6 +238,7 @@ function App() {
         <Route path="/not-preserved" element={<NotPreserved />} />
         <Route path="/nested" element={<Nested />} />
         <Route path="/fix-nested" element={<FixNested />} />
+        <Route path="/reacting-to-input" element={<ReactingToInput />} />
       </Routes>
     </Router>
   );
