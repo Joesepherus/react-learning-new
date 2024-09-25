@@ -65,6 +65,9 @@ import State_RegularVariable from "./state/State_RegularVariable.js";
 import State_RegularVariableWithForceUpdate from "./state/State_RegularVariableWithForceUpdate";
 import State_StateVariable from "./state/State_StateVariable";
 import State_Challenge1 from "./state/State_Challenge1";
+import State_Challenge2 from "./state/State_Challenge2";
+import State_Challenge3 from "./state/State_Challenge3";
+import State_Challenge4 from "./state/State_Challenge4";
 
 import "./styles.css";
 
@@ -305,6 +308,21 @@ const components = [
     name: "State_Challenge1",
     path: "state-challenge1",
     element: State_Challenge1,
+  },
+  {
+    name: "State_Challenge2",
+    path: "state-challenge2",
+    element: State_Challenge2,
+  },
+  {
+    name: "State_Challenge3",
+    path: "state-challenge3",
+    element: State_Challenge3,
+  },
+  {
+    name: "State_Challenge4",
+    path: "state-challenge4",
+    element: State_Challenge4,
   },
 ];
 
