@@ -49,6 +49,8 @@ import NotPreserved from "./preservingState/NotPreserved/NotPreserved";
 import Nested from "./preservingState/Nested/Nested";
 import FixNested from "./preservingState/FixNested/FixNested";
 import ReactingToInput from "./reactingToInput/ReactingToInput";
+import ReactingToInput_Challenge1 from "./reactingToInput/ReactingToInput_Challenge1";
+import ReactingToInput_Challenge2 from "./reactingToInput/ReactingToInput_Challenge2";
 import "./styles.css";
 
 // HomePage component that lists all components in cards
@@ -130,6 +132,14 @@ function HomePage() {
     { name: "Nested", path: "/nested" },
     { name: "FixNested", path: "/fix-nested" },
     { name: "ReactingToInput", path: "/reacting-to-input" },
+    {
+      name: "ReactingToInput_Challenge1",
+      path: "/reacting-to-input-challenge1",
+    },
+    {
+      name: "ReactingToInput_Challenge2",
+      path: "/reacting-to-input-challenge2",
+    },
   ];
 
   return (
@@ -239,6 +249,14 @@ function App() {
         <Route path="/nested" element={<Nested />} />
         <Route path="/fix-nested" element={<FixNested />} />
         <Route path="/reacting-to-input" element={<ReactingToInput />} />
+        <Route
+          path="/reacting-to-input-challenge1"
+          element={<ReactingToInput_Challenge1 />}
+        />
+        <Route
+          path="/reacting-to-input-challenge2"
+          element={<ReactingToInput_Challenge2 />}
+        />
       </Routes>
     </Router>
   );
