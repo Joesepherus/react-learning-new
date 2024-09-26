@@ -70,6 +70,10 @@ import State_Challenge3 from "./state/State_Challenge3";
 import State_Challenge4 from "./state/State_Challenge4";
 import Events_Challenge1 from "./events/Events_Challenge1";
 import Events_Challenge2 from "./events/Events_Challenge2";
+import FirstComponent_Challenge1 from "./firstComponent/FirstComponent_Challenge1";
+import FirstComponent_Challenge2 from "./firstComponent/FirstComponent_Challenge2";
+import FirstComponent_Challenge3 from "./firstComponent/FirstComponent_Challenge3";
+import FirstComponent_Challenge4 from "./firstComponent/FirstComponent_Challenge4";
 
 import "./styles.css";
 
@@ -335,6 +339,24 @@ const components = [
     name: "Events_Challenge2",
     path: "events-challenge2",
     element: Events_Challenge2,
+  },
+  {
+    name: "FirstComponent_Challenge1",
+    path: "first-component-challenge1",
+    element: FirstComponent_Challenge1,
+  },
+  {
+    name: "FirstComponent_Challenge2",
+    path: "first-component-challenge2",
+    element: FirstComponent_Challenge2,
+  },  {
+    name: "FirstComponent_Challenge3",
+    path: "first-component-challenge3",
+    element: FirstComponent_Challenge3,
+  },  {
+    name: "FirstComponent_Challenge4",
+    path: "first-component-challenge4",
+    element: FirstComponent_Challenge4,
   },
 ];
 
