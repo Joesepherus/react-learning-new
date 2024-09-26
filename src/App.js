@@ -83,6 +83,9 @@ import PassingProps_PropsChange from "./passingProps/PropsChange";
 import PassingProps_Challenge1 from "./passingProps/PassingProps_Challenge1";
 import PassingProps_Challenge2 from "./passingProps/PassingProps_Challenge2";
 import PassingProps_Challenge3 from "./passingProps/PassingProps_Challenge3";
+import ConditionalRendering_Challenge1 from "./conditionalRendering/ConditionalRendering_Challenge1";
+import ConditionalRendering_Challenge2 from "./conditionalRendering/ConditionalRendering_Challenge2";
+import ConditionalRendering_Challenge3 from "./conditionalRendering/ConditionalRendering_Challenge3";
 
 import "./styles.css";
 
@@ -413,6 +416,21 @@ const components = [
     name: "PassingProps_Challenge3",
     path: "passing-props-challenge3",
     element: PassingProps_Challenge3,
+  },
+  {
+    name: "ConditionalRendering_Challenge1",
+    path: "conditional-rendering-challenge1",
+    element: ConditionalRendering_Challenge1,
+  },
+  {
+    name: "ConditionalRendering_Challenge2",
+    path: "conditional-rendering-challenge2",
+    element: ConditionalRendering_Challenge2,
+  },
+  {
+    name: "ConditionalRendering_Challenge3",
+    path: "conditional-rendering-challenge3",
+    element: ConditionalRendering_Challenge3,
   },
 ];
 
