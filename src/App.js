@@ -68,6 +68,8 @@ import State_Challenge1 from "./state/State_Challenge1";
 import State_Challenge2 from "./state/State_Challenge2";
 import State_Challenge3 from "./state/State_Challenge3";
 import State_Challenge4 from "./state/State_Challenge4";
+import Events_Challenge1 from "./events/Events_Challenge1";
+import Events_Challenge2 from "./events/Events_Challenge2";
 
 import "./styles.css";
 
@@ -323,6 +325,16 @@ const components = [
     name: "State_Challenge4",
     path: "state-challenge4",
     element: State_Challenge4,
+  },
+  {
+    name: "Events_Challenge1",
+    path: "events-challenge1",
+    element: Events_Challenge1,
+  },
+  {
+    name: "Events_Challenge2",
+    path: "events-challenge2",
+    element: Events_Challenge2,
   },
 ];
 
