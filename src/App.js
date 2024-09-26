@@ -80,6 +80,9 @@ import JSinJSX_Challenge1 from "./JSinJSX/JSinJSX_Challenge1";
 import JSinJSX_Challenge2 from "./JSinJSX/JSinJSX_Challenge2";
 import JSinJSX_Challenge3 from "./JSinJSX/JSinJSX_Challenge3";
 import PassingProps_PropsChange from "./passingProps/PropsChange";
+import PassingProps_Challenge1 from "./passingProps/PassingProps_Challenge1";
+import PassingProps_Challenge2 from "./passingProps/PassingProps_Challenge2";
+import PassingProps_Challenge3 from "./passingProps/PassingProps_Challenge3";
 
 import "./styles.css";
 
@@ -395,6 +398,21 @@ const components = [
     name: "PassingProps_PropsChange",
     path: "passing-props-props-change",
     element: PassingProps_PropsChange,
+  },
+  {
+    name: "PassingProps_Challenge1",
+    path: "passing-props-challenge1",
+    element: PassingProps_Challenge1,
+  },
+  {
+    name: "PassingProps_Challenge2",
+    path: "passing-props-challenge2",
+    element: PassingProps_Challenge2,
+  },
+  {
+    name: "PassingProps_Challenge3",
+    path: "passing-props-challenge3",
+    element: PassingProps_Challenge3,
   },
 ];
 
