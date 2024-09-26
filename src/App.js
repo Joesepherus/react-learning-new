@@ -74,6 +74,8 @@ import FirstComponent_Challenge1 from "./firstComponent/FirstComponent_Challenge
 import FirstComponent_Challenge2 from "./firstComponent/FirstComponent_Challenge2";
 import FirstComponent_Challenge3 from "./firstComponent/FirstComponent_Challenge3";
 import FirstComponent_Challenge4 from "./firstComponent/FirstComponent_Challenge4";
+import ImportExport_Challenge1 from "./importExport/ImportExport_Challenge1";
+import Jsx_Challenge1 from "./jsx/Jsx_Challenge1";
 
 import "./styles.css";
 
@@ -349,14 +351,26 @@ const components = [
     name: "FirstComponent_Challenge2",
     path: "first-component-challenge2",
     element: FirstComponent_Challenge2,
-  },  {
+  },
+  {
     name: "FirstComponent_Challenge3",
     path: "first-component-challenge3",
     element: FirstComponent_Challenge3,
-  },  {
+  },
+  {
     name: "FirstComponent_Challenge4",
     path: "first-component-challenge4",
     element: FirstComponent_Challenge4,
+  },
+  {
+    name: "ImportExport_Challenge1",
+    path: "import-export-challenge1",
+    element: ImportExport_Challenge1,
+  },
+  {
+    name: "Jsx_Challenge1",
+    path: "jsx-challenge1",
+    element: Jsx_Challenge1,
   },
 ];
 
