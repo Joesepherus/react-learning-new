@@ -86,6 +86,10 @@ import PassingProps_Challenge3 from "./passingProps/PassingProps_Challenge3";
 import ConditionalRendering_Challenge1 from "./conditionalRendering/ConditionalRendering_Challenge1";
 import ConditionalRendering_Challenge2 from "./conditionalRendering/ConditionalRendering_Challenge2";
 import ConditionalRendering_Challenge3 from "./conditionalRendering/ConditionalRendering_Challenge3";
+import CustomHooks_IsOnline from "./customHooks/CustomHooks_IsOnline";
+import CustomHooks_FormInput from "./customHooks/CustomHooks_FormInput";
+import CustomHooks_Chat from "./customHooks/CustomHooks_Chat";
+import CustomHooks_Challenge1 from "./customHooks/CustomHooks_Challenge1";
 
 import "./styles.css";
 
@@ -594,7 +598,36 @@ const sections = [
       },
     ],
   },
-  { title: "TODO: Reusing Logic with Custom Hooks", components: [] },
+  {
+    title: "TODO: Reusing Logic with Custom Hooks",
+    components: [
+      {
+        name: "CustomHooks_IsOnline",
+        path: "/custom-hooks-is-online",
+        element: CustomHooks_IsOnline,
+      },
+      {
+        name: "CustomHooks_FormInput",
+        path: "/custom-hooks-form-input",
+        element: CustomHooks_FormInput,
+      },
+      {
+        name: "CustomHooks_Chat",
+        path: "/custom-hooks-chat",
+        element: CustomHooks_Chat,
+      },
+      {
+        name: "CustomHooks_Challenge1",
+        path: "/custom-hooks-challenge1",
+        element: CustomHooks_Challenge1,
+      },
+      {
+        name: "CustomHooks_Challenge2",
+        path: "/custom-hooks-challenge2",
+        element: CustomHooks_Challenge2,
+      },
+    ],
+  },
   {
     title: "Others",
     components: [
