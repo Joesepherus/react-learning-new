@@ -1,62 +1,62 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import BuggyTimer from "./BuggyTimer";
-import BuggyTimerFixed from "./BuggyTimerFixed";
-import BuggyTimerFixed2 from "./BuggyTimerFixed2";
-import Stopwatch from "./Stopwatch";
-import RefNotUpdating from "./RefNotUpdating";
-import RefUpdating from "./RefUpdating";
-import RefUpdating2 from "./RefUpdating2";
-import VariableNotUpdating from "./VariableNotUpdating";
-import Challenge1 from "./refs/Challenge1";
-import Challenge2 from "./refs/Challenge2";
-import Challenge3 from "./refs/Challenge3";
-import Challenge4 from "./refs/Challenge4";
-import Focus from "./refs/Focus";
-import Scroll from "./refs/Scroll";
-import Scroll2 from "./refs/Scroll2";
-import RefForwardingDeepDive from "./refs/RefForwardingDeepDive";
-import ModifyDOMBreak from "./refs/ModifyDOMBreak";
-import Challenge1_refs_dom from "./refs_dom/Challenge1";
-import Challenge2_refs_dom from "./refs_dom/Challenge2";
-import Challenge3_refs_dom from "./refs_dom/Challenge3";
-import Challenge4_refs_dom from "./refs_dom/Challenge4";
-import VideoPlayer from "./effects/VideoPlayer";
-import InfiniteLoop from "./effects/InfiniteLoop";
-import InfiniteLoopFix from "./effects/InfiniteLoopFix";
-import VideoPlayerTooManyRenders from "./effects/VideoPlayerTooManyRenders";
-import VideoPlayerTooManyRendersFix from "./effects/VideoPlayerTooManyRendersFix";
-import ChatRoom from "./effects/ChatRoom";
-import Playground from "./effects/Playground";
-import Challenge1_effects from "./effects/Challenge1";
-import Challenge2_effects from "./effects/Challenge2";
-import Challenge3_effects from "./effects/Challenge3";
-import Challenge4_effects from "./effects/Challenge4";
-import Challenge1_reactive_effects from "./reactive_effects/Challenge1";
-import Challenge2_reactive_effects from "./reactive_effects/Challenge2";
-import Challenge3_reactive_effects from "./reactive_effects/Challenge3";
-import Challenge4_reactive_effects from "./reactive_effects/Challenge4";
-import Challenge5_reactive_effects from "./reactive_effects/Challenge5";
-import Challenge1_remove_dependencies from "./remove_dependencies/Challenge1";
-import Challenge3_remove_dependencies from "./remove_dependencies/Challenge3";
-import WithoutReducer from "./reducer/WithoutReducer";
-import WithoutContext from "./context/WithoutContext/WithoutContext";
+import Others_BuggyTimer from "./BuggyTimer";
+import Others_BuggyTimerFixed from "./BuggyTimerFixed";
+import Others_BuggyTimerFixed2 from "./BuggyTimerFixed2";
+import Others_Stopwatch from "./Stopwatch";
+import Others_RefNotUpdating from "./RefNotUpdating";
+import Others_RefUpdating from "./RefUpdating";
+import Others_RefUpdating2 from "./RefUpdating2";
+import Others_VariableNotUpdating from "./VariableNotUpdating";
+import Refs_Challenge1 from "./refs/Challenge1";
+import Refs_Challenge2 from "./refs/Challenge2";
+import Refs_Challenge3 from "./refs/Challenge3";
+import Refs_Challenge4 from "./refs/Challenge4";
+import DOMRefs_Focus from "./refs/Focus";
+import DOMRefs_Scroll from "./refs/Scroll";
+import DOMRefs_Scroll2 from "./refs/Scroll2";
+import DOMRefs_RefForwardingDeepDive from "./refs/RefForwardingDeepDive";
+import DOMRefs_ModifyDOMBreak from "./refs/ModifyDOMBreak";
+import DOMRefs_Challenge1 from "./refs_dom/Challenge1";
+import DOMRefs_Challenge2 from "./refs_dom/Challenge2";
+import DOMRefs_Challenge3 from "./refs_dom/Challenge3";
+import DOMRefs_Challenge4 from "./refs_dom/Challenge4";
+import SyncEffects_VideoPlayer from "./effects/VideoPlayer";
+import SyncEffects_InfiniteLoop from "./effects/InfiniteLoop";
+import SyncEffects_InfiniteLoopFix from "./effects/InfiniteLoopFix";
+import SyncEffects_VideoPlayerTooManyRenders from "./effects/VideoPlayerTooManyRenders";
+import SyncEffects_VideoPlayerTooManyRendersFix from "./effects/VideoPlayerTooManyRendersFix";
+import SyncEffects_ChatRoom from "./effects/ChatRoom";
+import SyncEffects_Playground from "./effects/Playground";
+import SyncEffects_Challenge1 from "./effects/Challenge1";
+import SyncEffects_Challenge2 from "./effects/Challenge2";
+import SyncEffects_Challenge3 from "./effects/Challenge3";
+import SyncEffects_Challenge4 from "./effects/Challenge4";
+import ReactiveEffects_Challenge1 from "./reactive_effects/Challenge1";
+import ReactiveEffects_Challenge2 from "./reactive_effects/Challenge2";
+import ReactiveEffects_Challenge3 from "./reactive_effects/Challenge3";
+import ReactiveEffects_Challenge4 from "./reactive_effects/Challenge4";
+import ReactiveEffects_Challenge5 from "./reactive_effects/Challenge5";
+import RemovingDependencies_Challenge1 from "./remove_dependencies/Challenge1";
+import RemovingDependencies_Challenge3 from "./remove_dependencies/Challenge3";
+import ExtractingState_WithoutReducer from "./reducer/WithoutReducer";
+import ExtractingState_WithoutContext from "./context/WithoutContext/WithoutContext";
 import WithContext from "./context/WithContext/WithContext";
-import ReducerWithoutContext from "./reducerAndContext/ReducerWithoutContext/ReducerWithoutContext";
-import ReducerWithContext from "./reducerAndContext/ReducerWithContext/ReducerWithContext";
-import Preserved from "./preservingState/Preserved/Preserved";
-import NotPreserved from "./preservingState/NotPreserved/NotPreserved";
-import Nested from "./preservingState/Nested/Nested";
-import FixNested from "./preservingState/FixNested/FixNested";
+import ScalingUp_ReducerWithoutContext from "./reducerAndContext/ReducerWithoutContext/ReducerWithoutContext";
+import ScalingUp_ReducerWithContext from "./reducerAndContext/ReducerWithContext/ReducerWithContext";
+import Preserving_Preserved from "./preservingState/Preserved/Preserved";
+import Preserving_NotPreserved from "./preservingState/NotPreserved/NotPreserved";
+import Preserving_Nested from "./preservingState/Nested/Nested";
+import Preserving_FixNested from "./preservingState/FixNested/FixNested";
 import ReactingToInput from "./reactingToInput/ReactingToInput";
 import ReactingToInput_Challenge1 from "./reactingToInput/ReactingToInput_Challenge1";
 import ReactingToInput_Challenge2 from "./reactingToInput/ReactingToInput_Challenge2";
 import Queueing_Challenge1 from "./queueing/Queueing_Challenge1";
 import Queueing_Challenge2 from "./queueing/Queueing_Challenge2";
-import SingleEvent from "./updatingObjects/SingleEvent";
-import NestedObject from "./updatingObjects/NestedObject";
-import UpdatingObjectsChallenge1 from "./updatingObjects/UpdatingObjects_Challenge1";
-import UpdatingObjectsChallenge2 from "./updatingObjects/UpdatingObjects_Challenge2";
+import UpdatingObjects_SingleEvent from "./updatingObjects/SingleEvent";
+import UpdatingObjects_NestedObject from "./updatingObjects/NestedObject";
+import UpdatingObjects_Challenge1 from "./updatingObjects/UpdatingObjects_Challenge1";
+import UpdatingObjects_Challenge2 from "./updatingObjects/UpdatingObjects_Challenge2";
 import UpdatingArrays_Challenge1 from "./updatingArrays/UpdatingArrays_Challenge1";
 import UpdatingArrays_Challenge2 from "./updatingArrays/UpdatingArrays_Challenge2";
 import UpdatingArrays_Challenge3 from "./updatingArrays/UpdatingArrays_Challenge3";
@@ -89,348 +89,556 @@ import ConditionalRendering_Challenge3 from "./conditionalRendering/ConditionalR
 
 import "./styles.css";
 
-const components = [
-  { name: "BuggyTimer", path: "/buggy-timer", element: BuggyTimer },
+const sections = [
   {
-    name: "BuggyTimerFixed",
-    path: "/buggy-timer-fixed",
-    element: BuggyTimerFixed,
+    title: "Your First Component",
+    components: [
+      {
+        name: "FirstComponent_Challenge1",
+        path: "first-component-challenge1",
+        element: FirstComponent_Challenge1,
+      },
+      {
+        name: "FirstComponent_Challenge2",
+        path: "first-component-challenge2",
+        element: FirstComponent_Challenge2,
+      },
+      {
+        name: "FirstComponent_Challenge3",
+        path: "first-component-challenge3",
+        element: FirstComponent_Challenge3,
+      },
+      {
+        name: "FirstComponent_Challenge4",
+        path: "first-component-challenge4",
+        element: FirstComponent_Challenge4,
+      },
+    ],
   },
   {
-    name: "BuggyTimerFixed2",
-    path: "/buggy-timer-fixed2",
-    element: BuggyTimerFixed2,
-  },
-  { name: "Stopwatch", path: "/stopwatch", element: Stopwatch },
-  {
-    name: "RefNotUpdating",
-    path: "/ref-not-updating",
-    element: RefNotUpdating,
-  },
-  { name: "RefUpdating", path: "/ref-updating", element: RefUpdating },
-  { name: "RefUpdating2", path: "/ref-updating-2", element: RefUpdating2 },
-  {
-    name: "VariableNotUpdating",
-    path: "/variable-not-updating",
-    element: VariableNotUpdating,
-  },
-  { name: "Challenge1", path: "/challenge1", element: Challenge1 },
-  { name: "Challenge2", path: "/challenge2", element: Challenge2 },
-  { name: "Challenge3", path: "/challenge3", element: Challenge3 },
-  { name: "Challenge4", path: "/challenge4", element: Challenge4 },
-  { name: "Focus", path: "/focus", element: Focus },
-  { name: "Scroll", path: "/scroll", element: Scroll },
-  { name: "Scroll2", path: "/scroll-2", element: Scroll2 },
-  {
-    name: "RefForwardingDeepDive",
-    path: "/ref-forwarding-deep-dive",
-    element: RefForwardingDeepDive,
+    title: "Importing and Exporting Components",
+    components: [
+      {
+        name: "ImportExport_Challenge1",
+        path: "import-export-challenge1",
+        element: ImportExport_Challenge1,
+      },
+    ],
   },
   {
-    name: "ModifyDOMBreak",
-    path: "/modify-dom-break",
-    element: ModifyDOMBreak,
+    title: "Writing Markup in JSX",
+    components: [
+      {
+        name: "Jsx_Challenge1",
+        path: "jsx-challenge1",
+        element: Jsx_Challenge1,
+      },
+    ],
   },
   {
-    name: "Challenge1_refs_dom",
-    path: "/challenge1-refs-dom",
-    element: Challenge1_refs_dom,
+    title: "JavaScript in JSX with Curly Braces",
+    components: [
+      {
+        name: "JSinJSX_Challenge1",
+        path: "js-in-jsx-challenge1",
+        element: JSinJSX_Challenge1,
+      },
+      {
+        name: "JSinJSX_Challenge2",
+        path: "js-in-jsx-challenge2",
+        element: JSinJSX_Challenge2,
+      },
+      {
+        name: "JSinJSX_Challenge3",
+        path: "js-in-jsx-challenge3",
+        element: JSinJSX_Challenge3,
+      },
+    ],
   },
   {
-    name: "Challenge2_refs_dom",
-    path: "/challenge2-refs-dom",
-    element: Challenge2_refs_dom,
+    title: "Passing Props to a Component",
+    components: [
+      {
+        name: "PassingProps_PropsChange",
+        path: "passing-props-props-change",
+        element: PassingProps_PropsChange,
+      },
+      {
+        name: "PassingProps_Challenge1",
+        path: "passing-props-challenge1",
+        element: PassingProps_Challenge1,
+      },
+      {
+        name: "PassingProps_Challenge2",
+        path: "passing-props-challenge2",
+        element: PassingProps_Challenge2,
+      },
+      {
+        name: "PassingProps_Challenge3",
+        path: "passing-props-challenge3",
+        element: PassingProps_Challenge3,
+      },
+    ],
   },
   {
-    name: "Challenge3_refs_dom",
-    path: "/challenge3-refs-dom",
-    element: Challenge3_refs_dom,
+    title: "Conditional Rendering",
+    components: [
+      {
+        name: "ConditionalRendering_Challenge1",
+        path: "conditional-rendering-challenge1",
+        element: ConditionalRendering_Challenge1,
+      },
+      {
+        name: "ConditionalRendering_Challenge2",
+        path: "conditional-rendering-challenge2",
+        element: ConditionalRendering_Challenge2,
+      },
+      {
+        name: "ConditionalRendering_Challenge3",
+        path: "conditional-rendering-challenge3",
+        element: ConditionalRendering_Challenge3,
+      },
+    ],
   },
   {
-    name: "Challenge4_refs_dom",
-    path: "/challenge4-refs-dom",
-    element: Challenge4_refs_dom,
-  },
-  { name: "VideoPlayer", path: "/video-player", element: VideoPlayer },
-  { name: "InfiniteLoop", path: "/infinite-loop", element: InfiniteLoop },
-  {
-    name: "InfiniteLoopFix",
-    path: "/infinite-loop-fix",
-    element: InfiniteLoopFix,
-  },
-  {
-    name: "VideoPlayerTooManyRenders",
-    path: "/video-player-too-many-renders",
-    element: VideoPlayerTooManyRenders,
+    title: "Responding to Events",
+    components: [
+      {
+        name: "Events_Challenge1",
+        path: "events-challenge1",
+        element: Events_Challenge1,
+      },
+      {
+        name: "Events_Challenge2",
+        path: "events-challenge2",
+        element: Events_Challenge2,
+      },
+    ],
   },
   {
-    name: "VideoPlayerTooManyRendersFix",
-    path: "/video-player-too-many-renders-fix",
-    element: VideoPlayerTooManyRendersFix,
-  },
-  { name: "ChatRoom", path: "/chat-room", element: ChatRoom },
-  { name: "Playground", path: "/playground", element: Playground },
-  {
-    name: "Challenge1_effects",
-    path: "/challenge1-effects",
-    element: Challenge1_effects,
-  },
-  {
-    name: "Challenge2_effects",
-    path: "/challenge2-effects",
-    element: Challenge2_effects,
-  },
-  {
-    name: "Challenge3_effects",
-    path: "/challenge3-effects",
-    element: Challenge3_effects,
-  },
-  {
-    name: "Challenge4_effects",
-    path: "/challenge4-effects",
-    element: Challenge4_effects,
-  },
-  {
-    name: "Challenge1_reactive_effects",
-    path: "/challenge1-reactive-effects",
-    element: Challenge1_reactive_effects,
-  },
-  {
-    name: "Challenge2_reactive_effects",
-    path: "/challenge2-reactive-effects",
-    element: Challenge2_reactive_effects,
-  },
-  {
-    name: "Challenge3_reactive_effects",
-    path: "/challenge3-reactive-effects",
-    element: Challenge3_reactive_effects,
+    title: "State: A Component's Memory",
+    components: [
+      {
+        name: "State_RegularVariable",
+        path: "/state-regular-variable",
+        element: State_RegularVariable,
+      },
+      {
+        name: "State_RegularVariableWithForceUpdate",
+        path: "/state-regular-variable-with-force-update",
+        element: State_RegularVariableWithForceUpdate,
+      },
+      {
+        name: "State_StateVariable",
+        path: "/state-state-variable",
+        element: State_StateVariable,
+      },
+      {
+        name: "State_Challenge1",
+        path: "state-challenge1",
+        element: State_Challenge1,
+      },
+      {
+        name: "State_Challenge2",
+        path: "state-challenge2",
+        element: State_Challenge2,
+      },
+      {
+        name: "State_Challenge3",
+        path: "state-challenge3",
+        element: State_Challenge3,
+      },
+      {
+        name: "State_Challenge4",
+        path: "state-challenge4",
+        element: State_Challenge4,
+      },
+    ],
   },
   {
-    name: "Challenge4_reactive_effects",
-    path: "/challenge4-reactive-effects",
-    element: Challenge4_reactive_effects,
+    title: "State as a Snapshot",
+    components: [
+      {
+        name: "StateAsSnapshot_Challenge1",
+        path: "/state-as-snapshot-challenge1",
+        element: StateAsSnapshot_Challenge1,
+      },
+    ],
   },
   {
-    name: "Challenge5_reactive_effects",
-    path: "/challenge5-reactive-effects",
-    element: Challenge5_reactive_effects,
+    title: "Queueing a Series of State Updates",
+    components: [
+      {
+        name: "Queueing_Challenge1",
+        path: "/queueing-challenge1",
+        element: Queueing_Challenge1,
+      },
+      {
+        name: "Queueing_Challenge2",
+        path: "/queueing-challenge2",
+        element: Queueing_Challenge2,
+      },
+    ],
   },
   {
-    name: "Challenge1_remove_dependencies",
-    path: "/challenge1-remove-dependencies",
-    element: Challenge1_remove_dependencies,
+    title: "Updating Objects in State",
+    components: [
+      {
+        name: "UpdatingObjects_SingleEvent",
+        path: "/updating-objects-single-event",
+        element: UpdatingObjects_SingleEvent,
+      },
+      {
+        name: "UpdatingObjects_NestedObject",
+        path: "/updating-objects-nested-object",
+        element: UpdatingObjects_NestedObject,
+      },
+      {
+        name: "UpdatingObjects_Challenge1",
+        path: "/updating-objects-challenge1",
+        element: UpdatingObjects_Challenge1,
+      },
+      {
+        name: "UpdatingObjects_Challenge2",
+        path: "/updating-objects-challenge2",
+        element: UpdatingObjects_Challenge2,
+      },
+    ],
   },
   {
-    name: "Challenge3_remove_dependencies",
-    path: "/challenge3-remove-dependencies",
-    element: Challenge3_remove_dependencies,
-  },
-  { name: "WithoutReducer", path: "/without-reducer", element: WithoutReducer },
-  { name: "WithoutContext", path: "/without-context", element: WithoutContext },
-  { name: "WithContext", path: "/with-context", element: WithContext },
-  {
-    name: "ReducerWithoutContext",
-    path: "/reducer-without-context",
-    element: ReducerWithoutContext,
-  },
-  {
-    name: "ReducerWithContext",
-    path: "/reducer-with-context",
-    element: ReducerWithContext,
-  },
-  { name: "Preserved", path: "/preserved", element: Preserved },
-  { name: "NotPreserved", path: "/not-preserved", element: NotPreserved },
-  { name: "Nested", path: "/nested", element: Nested },
-  { name: "FixNested", path: "/fix-nested", element: FixNested },
-  {
-    name: "ReactingToInput",
-    path: "/reacting-to-input",
-    element: ReactingToInput,
+    title: "Updating Arrays in State",
+    components: [
+      {
+        name: "UpdatingArrays_Challenge1",
+        path: "/updating-arrays-challenge1",
+        element: UpdatingArrays_Challenge1,
+      },
+      {
+        name: "UpdatingArrays_Challenge2",
+        path: "/updating-arrays-challenge2",
+        element: UpdatingArrays_Challenge2,
+      },
+      {
+        name: "UpdatingArrays_Challenge3",
+        path: "/updating-arrays-challenge3",
+        element: UpdatingArrays_Challenge3,
+      },
+    ],
   },
   {
-    name: "ReactingToInput_Challenge1",
-    path: "/reacting-to-input-challenge1",
-    element: ReactingToInput_Challenge1,
+    title: "Reacting to Input with State",
+    components: [
+      {
+        name: "ReactingToInput",
+        path: "/reacting-to-input",
+        element: ReactingToInput,
+      },
+      {
+        name: "ReactingToInput_Challenge1",
+        path: "/reacting-to-input-challenge1",
+        element: ReactingToInput_Challenge1,
+      },
+      {
+        name: "ReactingToInput_Challenge2",
+        path: "/reacting-to-input-challenge2",
+        element: ReactingToInput_Challenge2,
+      },
+    ],
   },
   {
-    name: "ReactingToInput_Challenge2",
-    path: "/reacting-to-input-challenge2",
-    element: ReactingToInput_Challenge2,
+    title: "TODO: Choosing the State Structure",
+    components: [],
   },
   {
-    name: "Queueing_Challenge1",
-    path: "/queueing-challenge1",
-    element: Queueing_Challenge1,
+    title: "TODO: Sharing State Between Components",
+    components: [],
   },
   {
-    name: "Queueing_Challenge2",
-    path: "/queueing-challenge2",
-    element: Queueing_Challenge2,
+    title: "TODO: Preserving and Resetting State",
+    components: [
+      {
+        name: "Preserving_Preserved",
+        path: "/preserving-preserved",
+        element: Preserving_Preserved,
+      },
+      {
+        name: "Preserving_NotPreserved",
+        path: "/preserving-not-preserved",
+        element: Preserving_NotPreserved,
+      },
+      {
+        name: "Preserving_Nested",
+        path: "/preserving-nested",
+        element: Preserving_Nested,
+      },
+      {
+        name: "Preserving_FixNested",
+        path: "/preserving-fix-nested",
+        element: Preserving_FixNested,
+      },
+    ],
   },
   {
-    name: "SingleEvent",
-    path: "/updating-objects-single-event",
-    element: SingleEvent,
+    title: "TODO: Extracting State Logic into a Reducer",
+    components: [
+      {
+        name: "ExtractingState_WithoutReducer",
+        path: "/extracting-state-without-reducer",
+        element: ExtractingState_WithoutReducer,
+      },
+      {
+        name: "ExtractingState_WithoutContext",
+        path: "/extracting-state-without-context",
+        element: ExtractingState_WithoutContext,
+      },
+      { name: "WithContext", path: "/with-context", element: WithContext },
+    ],
   },
   {
-    name: "NestedObject",
-    path: "/updating-objects-nested-object",
-    element: NestedObject,
+    title: "Scaling Up with Reducer and Context",
+    components: [
+      {
+        name: "ScalingUp_ReducerWithoutContext",
+        path: "/scaling-up-reducer-without-context",
+        element: ScalingUp_ReducerWithoutContext,
+      },
+      {
+        name: "ScalingUp_ReducerWithContext",
+        path: "/scaling-up-reducer-with-context",
+        element: ScalingUp_ReducerWithContext,
+      },
+    ],
   },
   {
-    name: "UpdatingObjectsChallenge1",
-    path: "/updating-objects-challenge1",
-    element: UpdatingObjectsChallenge1,
+    title: "Referencing Values with Refs",
+    components: [
+      {
+        name: "Refs_Challenge1",
+        path: "/refs-challenge1",
+        element: Refs_Challenge1,
+      },
+      {
+        name: "Refs_Challenge2",
+        path: "/ref-schallenge2",
+        element: Refs_Challenge2,
+      },
+      {
+        name: "Refs_Challenge3",
+        path: "/refs-challenge3",
+        element: Refs_Challenge3,
+      },
+      {
+        name: "Refs_Challenge4",
+        path: "/refs-challenge4",
+        element: Refs_Challenge4,
+      },
+    ],
   },
   {
-    name: "UpdatingObjectsChallenge2",
-    path: "/updating-objects-challenge2",
-    element: UpdatingObjectsChallenge2,
+    title: "Manipulating the DOM with Refs",
+    components: [
+      {
+        name: "DOMRefs_Focus",
+        path: "/dom-refs-focus",
+        element: DOMRefs_Focus,
+      },
+      {
+        name: "DOMRefs_Scroll",
+        path: "/dom-refs-scroll",
+        element: DOMRefs_Scroll,
+      },
+      {
+        name: "DOMRefs_Scroll2",
+        path: "/dom-refs-scroll-2",
+        element: DOMRefs_Scroll2,
+      },
+      {
+        name: "DOMRefs_RefForwardingDeepDive",
+        path: "/dom-refs-ref-forwarding-deep-dive",
+        element: DOMRefs_RefForwardingDeepDive,
+      },
+      {
+        name: "DOMRefsRef_ModifyDOMBreak",
+        path: "/dom-refs-modify-dom-break",
+        element: DOMRefs_ModifyDOMBreak,
+      },
+      {
+        name: "DOMRefsRef_Challenge1",
+        path: "/dom-refs-challenge1",
+        element: DOMRefs_Challenge1,
+      },
+      {
+        name: "DOMRefsRef_Challenge2",
+        path: "/dom-refs-challenge2",
+        element: DOMRefs_Challenge2,
+      },
+      {
+        name: "DOMRefsRef_Challenge3",
+        path: "/dom-refs-challenge3",
+        element: DOMRefs_Challenge3,
+      },
+      {
+        name: "DOMRefsRef_Challenge4",
+        path: "/dom-refs-challenge4",
+        element: DOMRefs_Challenge4,
+      },
+    ],
   },
   {
-    name: "UpdatingArrays_Challenge1",
-    path: "/updating-arrays-challenge1",
-    element: UpdatingArrays_Challenge1,
+    title: "Synchronizing with Effects",
+    components: [
+      {
+        name: "SyncEffects_VideoPlayer",
+        path: "/sync-effects-video-player",
+        element: SyncEffects_VideoPlayer,
+      },
+      {
+        name: "SyncEffects_InfiniteLoop",
+        path: "/sync-effects-infinite-loop",
+        element: SyncEffects_InfiniteLoop,
+      },
+      {
+        name: "SyncEffects_InfiniteLoopFix",
+        path: "/sync-effects-infinite-loop-fix",
+        element: SyncEffects_InfiniteLoopFix,
+      },
+      {
+        name: "SyncEffects_VideoPlayerTooManyRenders",
+        path: "/sync-effects-video-player-too-many-renders",
+        element: SyncEffects_VideoPlayerTooManyRenders,
+      },
+      {
+        name: "SyncEffects_VideoPlayerTooManyRendersFix",
+        path: "/sync-effects-video-player-too-many-renders-fix",
+        element: SyncEffects_VideoPlayerTooManyRendersFix,
+      },
+      {
+        name: "SyncEffects_ChatRoom",
+        path: "/sync-effects-chat-room",
+        element: SyncEffects_ChatRoom,
+      },
+      {
+        name: "SyncEffects_Playground",
+        path: "/sync-effects-playground",
+        element: SyncEffects_Playground,
+      },
+      {
+        name: "SyncEffects_Challenge1",
+        path: "/sync-effects-challenge1-effects",
+        element: SyncEffects_Challenge1,
+      },
+      {
+        name: "SyncEffects_Challenge2",
+        path: "/sync-effects-challenge2-effects",
+        element: SyncEffects_Challenge2,
+      },
+      {
+        name: "SyncEffects_Challenge3",
+        path: "/sync-effects-challenge3-effects",
+        element: SyncEffects_Challenge3,
+      },
+      {
+        name: "SyncEffects_Challenge4",
+        path: "/sync-effects-challenge4-effects",
+        element: SyncEffects_Challenge4,
+      },
+    ],
   },
   {
-    name: "UpdatingArrays_Challenge2",
-    path: "/updating-arrays-challenge2",
-    element: UpdatingArrays_Challenge2,
+    title: "TODO: You Might Not Need an Effect",
+    components: [],
   },
   {
-    name: "UpdatingArrays_Challenge3",
-    path: "/updating-arrays-challenge3",
-    element: UpdatingArrays_Challenge3,
+    title: "Lifecycle of Reactive Effects",
+    components: [
+      {
+        name: "ReactiveEffects_Challenge1",
+        path: "/reactive-effects-challenge1",
+        element: ReactiveEffects_Challenge1,
+      },
+      {
+        name: "ReactiveEffects_Challenge2",
+        path: "/reactive-effects-challenge2",
+        element: ReactiveEffects_Challenge2,
+      },
+      {
+        name: "ReactiveEffects_Challenge3",
+        path: "/reactive-effects-challenge3",
+        element: ReactiveEffects_Challenge3,
+      },
+      {
+        name: "ReactiveEffects_Challenge4",
+        path: "/reactive-effects-challenge4",
+        element: ReactiveEffects_Challenge4,
+      },
+      {
+        name: "ReactiveEffects_Challenge5",
+        path: "/reactive-effects-challenge5",
+        element: ReactiveEffects_Challenge5,
+      },
+    ],
   },
+  { title: "TODO: Seperating Events from Effects", components: [] },
   {
-    name: "StateAsSnapshot_Challenge1",
-    path: "/state-as-snapshot-challenge1",
-    element: StateAsSnapshot_Challenge1,
+    title: "TODO: Removing Effect Dependencies",
+    components: [
+      {
+        name: "RemovingDependencies_Challenge1",
+        path: "/removing-dependencies-challenge1",
+        element: RemovingDependencies_Challenge1,
+      },
+      {
+        name: "RemovingDependencies_Challenge3",
+        path: "/removing-dependencies-challenge3",
+        element: RemovingDependencies_Challenge3,
+      },
+    ],
   },
+  { title: "TODO: Reusing Logic with Custom Hooks", components: [] },
   {
-    name: "State_RegularVariable",
-    path: "/state-regular-variable",
-    element: State_RegularVariable,
-  },
-  {
-    name: "State_RegularVariableWithForceUpdate",
-    path: "/state-regular-variable-with-force-update",
-    element: State_RegularVariableWithForceUpdate,
-  },
-  {
-    name: "State_StateVariable",
-    path: "/state-state-variable",
-    element: State_StateVariable,
-  },
-  {
-    name: "State_Challenge1",
-    path: "state-challenge1",
-    element: State_Challenge1,
-  },
-  {
-    name: "State_Challenge2",
-    path: "state-challenge2",
-    element: State_Challenge2,
-  },
-  {
-    name: "State_Challenge3",
-    path: "state-challenge3",
-    element: State_Challenge3,
-  },
-  {
-    name: "State_Challenge4",
-    path: "state-challenge4",
-    element: State_Challenge4,
-  },
-  {
-    name: "Events_Challenge1",
-    path: "events-challenge1",
-    element: Events_Challenge1,
-  },
-  {
-    name: "Events_Challenge2",
-    path: "events-challenge2",
-    element: Events_Challenge2,
-  },
-  {
-    name: "FirstComponent_Challenge1",
-    path: "first-component-challenge1",
-    element: FirstComponent_Challenge1,
-  },
-  {
-    name: "FirstComponent_Challenge2",
-    path: "first-component-challenge2",
-    element: FirstComponent_Challenge2,
-  },
-  {
-    name: "FirstComponent_Challenge3",
-    path: "first-component-challenge3",
-    element: FirstComponent_Challenge3,
-  },
-  {
-    name: "FirstComponent_Challenge4",
-    path: "first-component-challenge4",
-    element: FirstComponent_Challenge4,
-  },
-  {
-    name: "ImportExport_Challenge1",
-    path: "import-export-challenge1",
-    element: ImportExport_Challenge1,
-  },
-  {
-    name: "Jsx_Challenge1",
-    path: "jsx-challenge1",
-    element: Jsx_Challenge1,
-  },
-  {
-    name: "JSinJSX_Challenge1",
-    path: "js-in-jsx-challenge1",
-    element: JSinJSX_Challenge1,
-  },
-  {
-    name: "JSinJSX_Challenge2",
-    path: "js-in-jsx-challenge2",
-    element: JSinJSX_Challenge2,
-  },
-  {
-    name: "JSinJSX_Challenge3",
-    path: "js-in-jsx-challenge3",
-    element: JSinJSX_Challenge3,
-  },
-  {
-    name: "PassingProps_PropsChange",
-    path: "passing-props-props-change",
-    element: PassingProps_PropsChange,
-  },
-  {
-    name: "PassingProps_Challenge1",
-    path: "passing-props-challenge1",
-    element: PassingProps_Challenge1,
-  },
-  {
-    name: "PassingProps_Challenge2",
-    path: "passing-props-challenge2",
-    element: PassingProps_Challenge2,
-  },
-  {
-    name: "PassingProps_Challenge3",
-    path: "passing-props-challenge3",
-    element: PassingProps_Challenge3,
-  },
-  {
-    name: "ConditionalRendering_Challenge1",
-    path: "conditional-rendering-challenge1",
-    element: ConditionalRendering_Challenge1,
-  },
-  {
-    name: "ConditionalRendering_Challenge2",
-    path: "conditional-rendering-challenge2",
-    element: ConditionalRendering_Challenge2,
-  },
-  {
-    name: "ConditionalRendering_Challenge3",
-    path: "conditional-rendering-challenge3",
-    element: ConditionalRendering_Challenge3,
+    title: "Others",
+    components: [
+      {
+        name: "Others_BuggyTimer",
+        path: "/others-buggy-timer",
+        element: Others_BuggyTimer,
+      },
+      {
+        name: "Others_BuggyTimerFixed",
+        path: "/others-buggy-timer-fixed",
+        element: Others_BuggyTimerFixed,
+      },
+      {
+        name: "Others_BuggyTimerFixed2",
+        path: "/others-buggy-timer-fixed2",
+        element: Others_BuggyTimerFixed2,
+      },
+      {
+        name: "Others_Stopwatch",
+        path: "/stopwatch",
+        element: Others_Stopwatch,
+      },
+      {
+        name: "Others_RefNotUpdating",
+        path: "/others-ref-not-updating",
+        element: Others_RefNotUpdating,
+      },
+      {
+        name: "Others_RefUpdating",
+        path: "/others-ref-updating",
+        element: Others_RefUpdating,
+      },
+      {
+        name: "Others_RefUpdating2",
+        path: "/others-ref-updating-2",
+        element: Others_RefUpdating2,
+      },
+      {
+        name: "Others_VariableNotUpdating",
+        path: "/others-variable-not-updating",
+        element: Others_VariableNotUpdating,
+      },
+    ],
   },
 ];
 
@@ -439,15 +647,19 @@ function HomePage() {
   return (
     <div>
       <h1>Component List</h1>
-      <div>Count: {components.length}</div>
-      <div className="card-container">
-        {components.map((component) => (
-          <div key={component.name} className="card">
-            <h2>{component.name}</h2>
-            <Link to={component.path}>Go to {component.name}</Link>
+      {sections.map((section) => (
+        <div>
+          <h2>{section.title}</h2>
+          <div className="card-container">
+            {section.components.map((component) => (
+              <div key={component.name} className="card">
+                <h3>{component.name}</h3>
+                <Link to={component.path}>Go to {component.name}</Link>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -458,8 +670,12 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {components.map((component) => (
-          <Route path={component.path} element={<component.element />} />
+        {sections.map((section) => (
+          <>
+            {section.components.map((component) => (
+              <Route path={component.path} element={<component.element />} />
+            ))}
+          </>
         ))}
       </Routes>
     </Router>
