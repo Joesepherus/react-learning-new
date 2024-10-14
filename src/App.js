@@ -90,6 +90,10 @@ import CustomHooks_IsOnline from "./customHooks/CustomHooks_IsOnline";
 import CustomHooks_FormInput from "./customHooks/CustomHooks_FormInput";
 import CustomHooks_Chat from "./customHooks/CustomHooks_Chat";
 import CustomHooks_Challenge1 from "./customHooks/CustomHooks_Challenge1";
+import CustomHooks_Challenge2 from "./customHooks/CustomHooks_Challenge2";
+import CustomHooks_Challenge3 from "./customHooks/CustomHooks_Challenge3";
+import CustomHooks_Challenge4 from "./customHooks/CustomHooks_Challenge4";
+import CustomHooks_Challenge5 from "./customHooks/CustomHooks_Challenge5";
 
 import "./styles.css";
 
@@ -625,6 +629,21 @@ const sections = [
         name: "CustomHooks_Challenge2",
         path: "/custom-hooks-challenge2",
         element: CustomHooks_Challenge2,
+      },
+      {
+        name: "CustomHooks_Challenge3",
+        path: "/custom-hooks-challenge3",
+        element: CustomHooks_Challenge3,
+      },
+      {
+        name: "CustomHooks_Challenge4",
+        path: "/custom-hooks-challenge4",
+        element: CustomHooks_Challenge4,
+      },
+      {
+        name: "CustomHooks_Challenge5",
+        path: "/custom-hooks-challenge5",
+        element: CustomHooks_Challenge5,
       },
     ],
   },

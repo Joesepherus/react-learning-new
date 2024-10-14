@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { useCounter2 } from './useCounter2.js';
+import { useCounter } from './useCounter2.js';
 
 export default function Counter() {
   const [delay, setDelay] = useState(1000);
-  const count = useCounter2(delay);
+  const count = useCounter(delay);
 
   return (
     <>
