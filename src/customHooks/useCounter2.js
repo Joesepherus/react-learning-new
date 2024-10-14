@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function useCounter(delay) {
+export function useCounter(delay) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
